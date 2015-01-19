@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JarvinControls", "JarvinControls\JarvinControls.csproj", "{3636DB2B-440F-43C4-9BC9-794A76FBC761}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JarvinMainTest", "JarvinMainTest\JarvinMainTest.csproj", "{CC1E383F-9940-439C-B55F-5CB4620A8C51}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3636DB2B-440F-43C4-9BC9-794A76FBC761}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3636DB2B-440F-43C4-9BC9-794A76FBC761}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3636DB2B-440F-43C4-9BC9-794A76FBC761}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3636DB2B-440F-43C4-9BC9-794A76FBC761}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC1E383F-9940-439C-B55F-5CB4620A8C51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC1E383F-9940-439C-B55F-5CB4620A8C51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC1E383F-9940-439C-B55F-5CB4620A8C51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC1E383F-9940-439C-B55F-5CB4620A8C51}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

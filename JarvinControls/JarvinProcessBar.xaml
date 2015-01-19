@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="JarvinControls.JarvinProcessBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:converter="clr-namespace:JarvinControls.Converters"
+            xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"  
+             mc:Ignorable="d" >
+    <Grid>
+        <ProgressBar  x:Name="scrowbar" 
+                      Value="{Binding ProcessValue,RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}}">
+            <ProgressBar.Resources>
+                <converter:ValueToProcessConverter x:Key="valueConverter"></converter:ValueToProcessConverter>
+                <converter:BarValueConverter x:Key="precentConverter"></converter:BarValueConverter>
+                <converter:TitleHiddenConverter x:Key="titleConverter"></converter:TitleHiddenConverter>
+            </ProgressBar.Resources>
+            <ProgressBar.Template>
+                <ControlTemplate>
+                    <Grid>
+                        <Ellipse StrokeThickness="2" Stroke="Blue" />
+                        <Border Background="{Binding Value, ElementName=scrowbar, 
+                            Converter={StaticResource valueConverter}, 
+                            ConverterParameter=200}" Margin="2"></Border>
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" 
+                                   Text="{Binding Value, ElementName=scrowbar,Converter={StaticResource precentConverter}}"
+                                   Foreground="Black" Visibility="{Binding Visibility,ElementName=tiptb,Converter={StaticResource titleConverter}}"
+                                   FontSize="15"/>
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" 
+                                   Text="{Binding ActionTip,RelativeSource={RelativeSource Mode=FindAncestor, 
+                                    AncestorType=UserControl}}"  x:Name="tiptb" 
+                                   Foreground="Black" Visibility="{Binding IsReady,RelativeSource={RelativeSource Mode=FindAncestor, 
+                                    AncestorType=UserControl}}"
+                                   MouseLeftButtonUp="Begin" Cursor="Hand" FontSize="15"/>
+                    </Grid>
+                </ControlTemplate>
+            </ProgressBar.Template>
+        </ProgressBar>
+    </Grid>
+</UserControl>

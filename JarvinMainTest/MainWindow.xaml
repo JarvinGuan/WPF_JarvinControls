@@ -1,0 +1,19 @@
+﻿<Window x:Class="JarvinMainTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:myself="clr-namespace:JarvinControls;assembly=JarvinControls"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="myself:JarvinProcessBar" x:Key="MyBarStyle">
+                <Style.Triggers>
+                    
+                </Style.Triggers>
+            </Style>
+        </Grid.Resources>
+        <myself:JarvinProcessBar ProcessValue="6" ActionTip="下载" x:Name="bar" IsWaiting="True"
+                                 ActionClick="JarvinProcessBar_ActionClick"
+                                 Margin="191,109,237,140">
+        </myself:JarvinProcessBar>
+    </Grid>
+</Window>
